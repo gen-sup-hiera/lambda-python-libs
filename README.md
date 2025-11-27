@@ -12,7 +12,7 @@ AWS Lambda has package size limits and sometimes requires specific dependency co
 
 ## Current Packages
 
-### `requests_aws4auth-python313`
+### `requests_aws4auth.python313`
 
 **Runtime:** Python 3.13  
 **Dependencies:**
@@ -33,15 +33,15 @@ Follow these steps to add dependencies for a new Python runtime or a different s
 
 ```bash
 # Create the package directory with runtime specification
-mkdir -p <package-name>-python<version>/python
-cd <package-name>-python<version>/python
+mkdir -p <package-name>.python<version>/python
+cd <package-name>.python<version>/python
 ```
 
 Example:
 
 ```bash
-mkdir -p requests_aws4auth-python314/python
-cd requests_aws4auth-python314/python
+mkdir -p requests_aws4auth.python314/python
+cd requests_aws4auth.python314/python
 ```
 
 ### 2. Create the requirements.txt File
@@ -74,7 +74,7 @@ find . -type d -name "__pycache__" -exec rm -rf {} +
 Ensure your directory follows the Lambda Layer structure:
 
 ```plain
-<package-name>-python<version>/
+<package-name>.python<version>/
 └── python/
     ├── <library>/
     ├── <library>-<version>.dist-info/
@@ -84,7 +84,7 @@ Ensure your directory follows the Lambda Layer structure:
 ### 6. Commit to Repository
 
 ```bash
-git add <package-name>-python<version>
+git add <package-name>.python<version>
 git commit -m "Add <package-name> dependencies for Python <version>"
 git push
 ```
@@ -100,4 +100,4 @@ git push
 Dependencies retain their original licenses. Check each package's license before use.
 
 --- 
-**Last Updated:** 17 November 2025
+**Last Updated:** 27 November 2025
